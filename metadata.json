@@ -1,0 +1,6 @@
+{
+  "name": "Tovel Tecnologia",
+  "description": "Soluções digitais premium para empresas: criação de sites, sistemas, aplicativos, SaaS, automações e presença digital com alta performance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

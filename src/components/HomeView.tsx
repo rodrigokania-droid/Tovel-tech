@@ -1,0 +1,321 @@
+import React from 'react';
+import { ActivePage } from '../types';
+import { ArrowRight, Shield, Cpu, Zap, Activity, Award, Briefcase } from 'lucide-react';
+import { motion } from 'motion/react';
+import BackgroundVideo from './BackgroundVideo';
+
+interface HomeViewProps {
+  setActivePage: (page: ActivePage) => void;
+}
+
+export default function HomeView({ setActivePage }: HomeViewProps) {
+  const features = [
+    { label: 'TECNOLOGIA', icon: Cpu },
+    { label: 'INOVAÇÃO', icon: Zap },
+    { label: 'PERFORMANCE', icon: Activity },
+    { label: 'RESULTADOS', icon: Award },
+  ];
+
+  return (
+    <div className="space-y-8 pb-4 animate-fadeIn" id="home-view">
+      
+      {/* HERO SECTION */}
+      <section className="relative overflow-hidden flex items-center py-6 md:py-10">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <BackgroundVideo src="https://stream.mux.com/4IMYGcL01xjs7ek5ANO17JC4VQVUTsojZlnw4fXzwSxc.m3u8" />
+          {/* Glass Overlay over the video to ensure text readability */}
+          <div className="absolute inset-0 bg-[#0A0A0A]/60 backdrop-blur-md" />
+          {/* Gradient fade to blend with the rest of the site */}
+          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0A0A0A] to-transparent" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full pt-6 pb-6 md:pt-8">
+          
+          {/* Hero text */}
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-7 space-y-8 text-left"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/5 bg-white/5 backdrop-blur-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent/80" />
+              <span className="text-[11px] uppercase tracking-[0.2em] font-medium text-white/70">
+                Soluções Digitais
+              </span>
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-medium leading-[1.1] tracking-tight text-white uppercase">
+              A solução digital <br className="hidden md:block" />
+              certa para o <br className="hidden md:block" />
+              <span className="text-accent">seu negócio</span>
+            </h1>
+
+            <p className="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-xl font-sans font-light">
+              Você tem uma ideia, um negócio ou um processo bagunçado. Nós transformamos isso em sites, aplicativos, sistemas, automações e presença digital.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                id="hero-cta-button"
+                onClick={() => {
+                  window.open('https://wa.me/5554981185625', '_blank');
+                }}
+                className="bg-accent hover:bg-accent-hover text-white font-sans font-semibold text-xs tracking-wider uppercase px-8 py-4 rounded-md shadow-lg shadow-accent/20 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group"
+              >
+                Falar com Especialista
+                <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-1.5 transition-transform" />
+              </motion.button>
+            </div>
+          </motion.div>
+
+          {/* Premium Glass Cards Grid representing Split Layout signature graphic */}
+          <div className="lg:col-span-5 flex justify-center items-center h-full relative" id="hero-graphic-container">
+            <motion.div 
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.15, delayChildren: 0.2 }
+                }
+              }}
+              className="grid grid-cols-2 gap-4 w-full max-w-[420px]"
+            >
+                <motion.div 
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                  whileHover={{ scale: 1.02, translateY: -5 }}
+                  className="glass-card p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
+                >
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-white group-hover:border-white/30 transition-all duration-300">
+                    <Cpu size={18} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-medium text-sm text-zinc-200 mb-2">Sistemas Online</h3>
+                  <p className="text-xs text-zinc-500 leading-relaxed font-light">Sistemas e painéis sob medida para você.</p>
+                </motion.div>
+
+                <motion.div 
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                  whileHover={{ scale: 1.02, translateY: -5 }}
+                  className="glass-card p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 blur-2xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="w-10 h-10 bg-accent/10 border border-accent/20 rounded-full flex items-center justify-center mb-6 text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                    <Activity size={18} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-medium text-sm text-zinc-200 mb-2">Aplicativos</h3>
+                  <p className="text-xs text-zinc-500 leading-relaxed font-light">Aplicativos fáceis de usar para iOS e Android.</p>
+                </motion.div>
+                
+                <motion.div 
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                  whileHover={{ scale: 1.02, translateY: -5 }}
+                  className="glass-card p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
+                >
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-white group-hover:border-white/30 transition-all duration-300">
+                    <Zap size={18} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-medium text-sm text-zinc-200 mb-2">Automações</h3>
+                  <p className="text-xs text-zinc-500 leading-relaxed font-light">Automatize tarefas e ganhe muito mais tempo.</p>
+                </motion.div>
+                
+                <motion.div 
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                  whileHover={{ scale: 1.02, translateY: -5 }}
+                  className="glass-card p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
+                >
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-white group-hover:border-white/30 transition-all duration-300">
+                    <Briefcase size={18} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-medium text-sm text-zinc-200 mb-2">Sites Profissionais</h3>
+                  <p className="text-xs text-zinc-500 leading-relaxed font-light">Sites focados em receber contatos e vender.</p>
+                </motion.div>
+            </motion.div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* SECOND PAGE CONTAINER (Flows naturally) */}
+      <div className="flex flex-col gap-4">
+        {/* MID LABELS / CAPABILITIES BAR */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/5 pt-6 w-full">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {features.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="flex items-center gap-4 group cursor-default"
+              >
+                <div className="w-12 h-12 rounded-full border border-white/5 flex items-center justify-center text-zinc-500 group-hover:text-accent group-hover:border-accent/30 transition-all duration-500 bg-zinc-900/50">
+                  <Icon size={20} strokeWidth={1.5} />
+                </div>
+                <span className="text-sm font-medium tracking-wide text-zinc-400 group-hover:text-zinc-200 transition-colors">
+                  {item.label}
+                </span>
+              </motion.div>
+            );
+          })}
+        </div>
+        </section>
+
+        {/* DYNAMIC CASE STATS GRID / TWO-BY-TWO GRID */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-4"
+        >
+          
+          {/* Card 1: Foco em resultados */}
+          <div className="lg:col-span-7 glass-card border border-white/5 hover:border-white/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-colors group">
+            <div className="space-y-3">
+              <span className="text-[10px] font-mono font-bold tracking-widest text-accent uppercase">
+                O QUE NÓS FAZEMOS
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-display font-medium text-white tracking-tight leading-snug">
+                Tecnologia focada <br className="hidden sm:block"/>
+                em resultados reais.
+              </h3>
+              <p className="text-white/60 text-sm sm:text-base leading-relaxed max-w-lg">
+                Desenvolvemos soluções para você vender mais, organizar os processos internos e se destacar no mercado, sem nenhuma complicação técnica para o seu lado.
+              </p>
+            </div>
+            
+            <div className="flex gap-4 pt-6 border-t border-white/5 mt-6 text-white/40 group-hover:text-white/70 transition-colors">
+              <div className="flex items-center gap-2">
+                <Shield size={16} className="text-accent/60" />
+                <span className="text-xs font-mono">Segurança</span>
+              </div>
+              <div className="text-white/10">|</div>
+              <div className="flex items-center gap-2">
+                <Activity size={16} className="text-accent/60" />
+                <span className="text-xs font-mono">Rapidez</span>
+              </div>
+              <div className="text-white/10">|</div>
+              <div className="flex items-center gap-2">
+                <Cpu size={16} className="text-accent/60" />
+                <span className="text-xs font-mono">Qualidade</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Arquitetura Moderna */}
+          <div className="lg:col-span-5 glass-card border border-white/5 hover:border-white/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all group relative overflow-hidden">
+            <div className="absolute -right-20 -top-20 w-48 h-48 bg-accent/5 blur-3xl rounded-full" />
+            <div className="flex justify-between items-start mb-4">
+              <span className="text-white/30 font-mono text-xs select-none">v2.4.0</span>
+              <div className="flex gap-1 text-accent/40 group-hover:text-accent transition-colors">
+                <span className="text-xs font-mono font-black">&lt;&gt;</span>
+              </div>
+            </div>
+            
+            <div className="space-y-3">
+              <h3 className="text-2xl font-display font-medium text-white tracking-tight">
+                Tudo o que há de <br />
+                mais moderno
+              </h3>
+              <p className="text-white/60 text-sm leading-relaxed max-w-xs">
+                Usamos as melhores ferramentas do mercado para garantir que seu site ou sistema seja extremamente rápido e não trave.
+              </p>
+            </div>
+            
+            <div className="pt-4 border-t border-white/5 mt-4 grid grid-cols-2 gap-4">
+              <div>
+                <div className="text-xs text-white/30 font-mono">FRAMEWORKS</div>
+                <div className="text-sm font-semibold text-white">React / Next</div>
+              </div>
+              <div>
+                <div className="text-xs text-white/30 font-mono">ESTILIZAÇÃO</div>
+                <div className="text-sm font-semibold text-white">Tailwind 4</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3: 99.9% SLA */}
+          <div className="lg:col-span-4 border-l-2 border-l-accent glass-card border-t border-r border-b border-white/5 hover:border-white/10 rounded-2xl p-5 sm:p-6 transition-colors">
+            <div className="space-y-2">
+              <div className="text-4xl sm:text-5xl font-display font-bold text-white tracking-tight">
+                100%
+              </div>
+              <div>
+                <span className="text-[10px] font-mono font-bold tracking-widest text-accent uppercase block mb-1">
+                  SEMPRE ONLINE
+                </span>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Trabalhamos para garantir que a sua solução digital funcione perfeitamente, todos os dias do ano, sem dores de cabeça.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 4: Consultoria Especializada */}
+          <div className="lg:col-span-8 glass-card border border-white/5 hover:border-white/10 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 transition-colors group">
+            <div className="space-y-2 max-w-md">
+              <h3 className="text-xl sm:text-2xl font-display font-medium text-white tracking-tight">
+                Suporte e Consultoria
+              </h3>
+              <p className="text-white/60 text-sm leading-relaxed">
+                Entendemos as necessidades e os problemas do seu negócio para desenhar a melhor solução digital passo a passo, acompanhando você.
+              </p>
+            </div>
+            
+            <button
+              onClick={() => {
+                setActivePage('portfolio');
+              }}
+              className="inline-flex items-center gap-2 text-sm font-bold text-accent hover:text-white cursor-pointer transition-colors group/btn shrink-0"
+              id="goto-portfolio-btn"
+            >
+              Ver Portfólio
+              <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+            </button>
+          </div>
+
+          </motion.div>
+        </section>
+      </div>
+
+      {/* CORE MOTTO / MIDDLE SECTION */}
+      <section className="bg-gradient-to-b from-transparent to-[#0A0A0A] py-10 border-t border-b border-white/5" id="home-motto-section">
+        <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
+          <span className="text-[10px] font-mono font-bold tracking-widest text-[#9c9c9c] uppercase">
+            A FILOSOFIA TOVEL
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-display font-medium text-white tracking-tight max-w-2xl mx-auto leading-tight">
+            Não vendemos apenas design. <br />
+            <span className="text-accent italic font-bold">Criamos tecnologia real</span> para resolver problemas de verdade.
+          </h2>
+          <p className="text-white/60 text-base leading-relaxed max-w-xl mx-auto">
+            Acreditamos que todo pixel desenhado e toda linha de código digitada deve ter um único norte: decolar a eficiência, organizar fluxos internos e alavancar o faturamento do seu negócio.
+          </p>
+          <div className="pt-4">
+            <button
+              onClick={() => {
+                window.open('https://wa.me/5554981185625', '_blank');
+              }}
+              className="bg-accent hover:bg-accent-hover text-white font-bold text-sm px-8 py-3.5 rounded-xl transition-all cursor-pointer shadow-lg shadow-accent/15"
+            >
+              Iniciar Análise Gratuita
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+}
