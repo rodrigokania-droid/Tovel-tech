@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ActivePage, PortfolioItem } from '../types';
 import { PORTFOLIO_DATA } from '../data';
-import { ChevronRight, ExternalLink, Flame } from 'lucide-react';
+import { ChevronRight, ExternalLink, Flame, X } from 'lucide-react';
 
 interface PortfolioViewProps {
   setActivePage: (page: ActivePage) => void;
@@ -9,6 +9,16 @@ interface PortfolioViewProps {
 
 export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
   const [selectedFilter, setSelectedFilter] = useState<'todos' | 'sites' | 'sistemas' | 'apps' | 'saas' | 'social_media'>('todos');
+  const [selectedProject, setSelectedProject] = useState<PortfolioItem | null>(null);
+
+  React.useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [selectedProject]);
 
   const filterOptions = [
     { value: 'todos', label: 'TODOS' },
@@ -33,15 +43,18 @@ export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border-white/10">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             <span className="text-[10px] uppercase tracking-widest font-extrabold opacity-85 font-mono text-white">
-              NOSSO PORTFÓLIO
+              CONCEITOS APLICADOS
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-sans font-extrabold text-white tracking-tight leading-none animate-slideUp">
-            Nossos últimos trabalhos <span className="text-accent drop-shadow-[0_0_20px_rgba(242,125,38,0.15)]">na prática</span>
+            Modelos de projetos <span className="text-accent drop-shadow-[0_0_20px_rgba(242,125,38,0.15)]">na prática</span>
           </h1>
           <p className="text-white/60 text-base sm:text-lg leading-relaxed max-w-2xl">
-            Veja como ajudamos outras empresas a organizar seus processos, vender mais na internet e se destacar da concorrência com soluções sob medida.
+            Veja demonstrações visuais de como podemos organizar processos, aumentar vendas na internet e destacar sua empresa com soluções sob medida.
           </p>
+          <div className="text-white/40 text-xs font-mono mt-4 italic">
+            * Exemplos visuais de soluções desenvolvidas sob medida.
+          </div>
         </div>
       </section>
 
@@ -76,90 +89,15 @@ export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
                 className="group flex flex-col justify-between glass-card border border-white/5 hover:border-accent/20 rounded-2xl p-6 transition-all duration-300 relative overflow-hidden"
               >
                 <div>
-                  {/* Miniature Vector Mockup representing the project beautifully */}
-                  <div className="aspect-video bg-[#0c0c0c]/80 rounded-xl border border-white/5 p-4 mb-6 relative overflow-hidden flex flex-col justify-between group-hover:border-accent/20 transition-colors">
-                    <div className="absolute inset-0 bg-dot-grid-fine opacity-20" />
-                    
-                    {/* Top window styling */}
-                    <div className="flex justify-between items-center border-b border-white/5 pb-2">
-                      <div className="flex gap-1.5">
-                        <span className="w-2 h-2 rounded-full bg-white/10" />
-                        <span className="w-2 h-2 rounded-full bg-white/10" />
-                        <span className="w-2 h-2 rounded-full bg-white/10" />
-                      </div>
-                      <span className="text-[8px] font-mono text-white/30 tracking-wider">https://tovel.tech/showcase</span>
-                    </div>
-
-                    {/* Internal aesthetic content based on category */}
-                    <div className="py-4 flex-1 flex flex-col justify-center items-center">
-                      {project.category === 'sites' && (
-                        <div className="space-y-2 text-center w-full px-2">
-                          <div className="h-2 w-2/3 bg-accent/20 rounded mx-auto" />
-                          <div className="h-1.5 w-1/2 bg-white/5 rounded mx-auto" />
-                          <div className="h-1.5 w-3/4 bg-white/5 rounded mx-auto" />
-                        </div>
-                      )}
-                      
-                      {project.category === 'sistemas' && (
-                        <div className="w-full space-y-3">
-                          <div className="flex gap-2">
-                            <span className="h-8 w-1/3 bg-white/5 border border-white/5 rounded flex items-center justify-center text-[10px] text-accent">89%</span>
-                            <span className="h-8 w-2/3 bg-white/5 border border-white/5 rounded flex flex-col justify-center px-2">
-                              <span className="h-1 w-full bg-white/10 rounded overflow-hidden">
-                                <span className="block h-full w-4/5 bg-accent rounded" />
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      )}
-
-                      {project.category === 'apps' && (
-                        <div className="w-20 h-24 bg-white/5 border border-white/5 rounded-lg p-2 flex flex-col justify-between mx-auto">
-                          <div className="w-4 h-4 rounded-full bg-accent/20 flex items-center justify-center mx-auto">
-                            <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-                          </div>
-                          <div className="space-y-1">
-                            <div className="h-1 bg-white/10 rounded" />
-                            <div className="h-1 bg-white/10 rounded w-4/5" />
-                          </div>
-                        </div>
-                      )}
-
-                      {project.category === 'saas' && (
-                        <div className="w-full grid grid-cols-3 gap-2">
-                          <div className="h-10 bg-white/5 border border-white/5 rounded p-1 text-[8px] text-white/40 font-mono flex flex-col justify-between">
-                            <span>REVENUE</span>
-                            <span className="text-white font-bold">+189%</span>
-                          </div>
-                          <div className="h-10 bg-white/5 border border-white/5 rounded p-1 text-[8px] text-white/40 font-mono flex flex-col justify-between">
-                            <span>MEM_LOAD</span>
-                            <span className="text-emerald-400 font-semibold">4.1%</span>
-                          </div>
-                          <div className="h-10 bg-white/5 border border-white/5 rounded p-1 text-[8px] text-white/40 font-mono flex flex-col justify-between col-span-1">
-                            <span>PING</span>
-                            <span className="text-accent font-bold">14ms</span>
-                          </div>
-                        </div>
-                      )}
-
-                      {project.category === 'social_media' && (
-                        <div className="w-full flex items-center justify-center gap-4">
-                          <div className="w-10 h-10 rounded-full border border-accent/20 flex items-center justify-center text-accent font-mono font-bold text-sm">
-                            ★
-                          </div>
-                          <div className="space-y-1.5">
-                            <div className="h-2 w-20 bg-white/10 rounded" />
-                            <div className="h-1.5 w-16 bg-white/5 rounded" />
-                          </div>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Footer code layout */}
-                    <div className="flex justify-between text-[7px] font-mono text-white/20">
-                      <span>STABLE COMPILED</span>
-                      <span>SEC_LOCKED</span>
-                    </div>
+                  {/* Real Image Mockup */}
+                  <div className="aspect-video bg-[#0c0c0c]/80 rounded-xl border border-white/5 mb-6 relative overflow-hidden group-hover:border-accent/20 transition-all duration-500">
+                    <img 
+                      src={project.imageUrl} 
+                      alt={`Demonstração de ${project.title}`}
+                      className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-transparent to-transparent opacity-80" />
                   </div>
 
                   {/* Badges */}
@@ -167,7 +105,7 @@ export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
                     <span className="text-[10px] font-mono font-bold text-accent bg-accent/10 border border-accent/15 px-2.5 py-0.5 rounded-full">
                       {project.categoryLabel}
                     </span>
-                    <span className="text-white/30 text-[10px] font-mono uppercase tracking-wider">TOVEL CASE</span>
+                    <span className="text-white/30 text-[10px] font-mono uppercase tracking-wider">EXEMPLO DE SOLUÇÃO</span>
                   </div>
 
                   <h3 className="text-xl font-sans font-bold text-white mb-2 group-hover:text-accent transition-colors">
@@ -189,15 +127,13 @@ export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
                     ))}
                   </div>
                   
-                  <a
-                    href="https://wa.me/5554981185625"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-mono font-bold text-white/65 hover:text-accent transition-colors pt-2 group-hover:translate-x-1"
+                  <button
+                    onClick={() => setSelectedProject(project)}
+                    className="inline-flex items-center gap-2 text-xs font-mono font-bold text-white/65 hover:text-accent transition-colors pt-2 group-hover:translate-x-1 cursor-pointer bg-transparent border-none p-0 text-left"
                   >
-                    Falar com especialista sobre este case
+                    Falar com especialista sobre este modelo
                     <ChevronRight size={14} className="text-accent" />
-                  </a>
+                  </button>
                 </div>
               </div>
             );
@@ -228,6 +164,63 @@ export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
           </div>
         </div>
       </section>
+
+      {/* PROJECT MODAL */}
+      {selectedProject && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center px-4" id="portfolio-modal">
+          <div 
+            className="absolute inset-0 bg-[#0A0A0A]/90 backdrop-blur-md transition-opacity" 
+            onClick={() => setSelectedProject(null)} 
+          />
+          <div className="relative glass-card border border-white/10 rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto overflow-x-hidden animate-slideUp shadow-2xl flex flex-col">
+            <button 
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-4 right-4 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/80 transition-colors border border-white/10"
+            >
+              <X size={18} />
+            </button>
+            
+            <div className="aspect-video w-full relative shrink-0">
+              <img src={selectedProject.imageUrl} alt={selectedProject.title} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/20 to-transparent" />
+            </div>
+            
+            <div className="p-6 sm:p-8 -mt-16 sm:-mt-20 relative z-10 flex-1 flex flex-col">
+               <div>
+                 <span className="text-[10px] font-mono font-bold text-accent bg-accent/10 border border-accent/20 px-3 py-1 rounded-full mb-4 inline-block backdrop-blur-md">
+                    {selectedProject.categoryLabel}
+                 </span>
+                 <h3 className="text-3xl sm:text-4xl font-sans font-bold text-white mb-4 tracking-tight">
+                   {selectedProject.title}
+                 </h3>
+                 <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
+                   {selectedProject.description}
+                 </p>
+               </div>
+
+               <div className="mb-8">
+                 <h4 className="text-[10px] uppercase tracking-widest font-mono text-white/40 mb-3">Destaques deste modelo</h4>
+                 <div className="flex flex-wrap gap-2">
+                    {selectedProject.techList.map((tech) => (
+                      <span key={tech} className="text-xs font-mono text-white/70 bg-white/5 border border-white/10 px-3 py-1.5 rounded-md">
+                        {tech}
+                      </span>
+                    ))}
+                 </div>
+               </div>
+
+               <div className="mt-auto pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-4 items-center">
+                 <button 
+                   onClick={() => window.open(`https://wa.me/5554981185625?text=${encodeURIComponent(`Olá! Gostaria de falar com um especialista sobre o modelo de ${selectedProject.title}.`)}`, '_blank')}
+                   className="w-full sm:w-auto flex-1 bg-accent hover:bg-accent-hover text-white font-bold py-4 px-8 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-accent/20 hover:shadow-accent/40 hover:-translate-y-0.5"
+                 >
+                   Falar com especialista sobre este modelo
+                 </button>
+               </div>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

@@ -58,7 +58,8 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     category: 'sites',
     categoryLabel: 'SITES',
     description: 'Criação de um site completo focado em passar credibilidade e receber pedidos de orçamento.',
-    techList: ['Design Premium', 'Botão WhatsApp', 'Otimizado pro Google', 'Rápido']
+    techList: ['Design Premium', 'Botão WhatsApp', 'Otimizado pro Google', 'Rápido'],
+    imageUrl: '/portfolio/site_empresa.png'
   },
   {
     id: 'port-2',
@@ -66,7 +67,8 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     category: 'sites',
     categoryLabel: 'SITES',
     description: 'Página focada em apresentar um produto e fazer o cliente comprar ou entrar em contato na hora.',
-    techList: ['Foco em Vendas', 'Perfeito no Celular', 'Carregamento Rápido']
+    techList: ['Foco em Vendas', 'Perfeito no Celular', 'Carregamento Rápido'],
+    imageUrl: '/portfolio/pagina_venda.png'
   },
   {
     id: 'port-3',
@@ -74,7 +76,8 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     category: 'sistemas',
     categoryLabel: 'SISTEMAS',
     description: 'Sistema sob medida para organizar estoque, pedidos e clientes em um só lugar.',
-    techList: ['Painel de Controle', 'Relatórios', 'Acesso Seguro', 'Fácil de Usar']
+    techList: ['Painel de Controle', 'Relatórios', 'Acesso Seguro', 'Fácil de Usar'],
+    imageUrl: '/portfolio/sistema_gestao.png'
   },
   {
     id: 'port-4',
@@ -82,7 +85,8 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     category: 'apps',
     categoryLabel: 'APPS',
     description: 'Aplicativo de celular para funcionários usarem na rua ou na empresa, acompanhando tarefas.',
-    techList: ['App no Celular', 'Geração de PDF', 'Rápido e Prático']
+    techList: ['App no Celular', 'Geração de PDF', 'Rápido e Prático'],
+    imageUrl: '/portfolio/app_equipe.png'
   },
   {
     id: 'port-5',
@@ -90,7 +94,8 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     category: 'saas',
     categoryLabel: 'PLATAFORMAS',
     description: 'Site restrito para alunos ou assinantes com login, senha e pagamento automático mensal.',
-    techList: ['Área de Login', 'Pagamento Automático', 'Bloqueio de Acesso']
+    techList: ['Área de Login', 'Pagamento Automático', 'Bloqueio de Acesso'],
+    imageUrl: '/portfolio/plataforma_membros.png'
   },
   {
     id: 'port-6',
@@ -98,7 +103,8 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     category: 'social_media',
     categoryLabel: 'PRESENÇA DIGITAL',
     description: 'Organização completa das redes sociais para a empresa passar uma imagem mais cara e profissional.',
-    techList: ['Artes Profissionais', 'Textos Atrativos', 'Organização Visual']
+    techList: ['Artes Profissionais', 'Textos Atrativos', 'Organização Visual'],
+    imageUrl: '/portfolio/id_visual_redes.png'
   }
 ];
 

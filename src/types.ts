@@ -7,6 +7,7 @@ export interface PortfolioItem {
   categoryLabel: string;
   description: string;
   techList: string[];
+  imageUrl: string;
 }
 
 export interface ServiceItem {
