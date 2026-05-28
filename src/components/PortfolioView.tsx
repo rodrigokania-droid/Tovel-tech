@@ -191,39 +191,39 @@ export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
               <X size={18} />
             </button>
             
-            <div className="aspect-video w-full relative shrink-0">
+            <div className="h-44 sm:h-52 md:h-64 w-full relative shrink-0">
               <img src={selectedProject.imageUrl} alt={selectedProject.title} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/20 to-transparent" />
             </div>
             
-            <div className="p-6 sm:p-8 -mt-16 sm:-mt-20 relative z-10 flex-1 flex flex-col">
+            <div className="p-5 sm:p-6 -mt-12 sm:-mt-16 relative z-10 flex-1 flex flex-col">
                <div>
-                 <span className="text-[10px] font-mono font-bold text-accent bg-accent/10 border border-accent/20 px-3 py-1 rounded-full mb-4 inline-block backdrop-blur-md">
+                 <span className="text-[10px] font-mono font-bold text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded-full mb-3 inline-block backdrop-blur-md">
                     {selectedProject.categoryLabel}
                  </span>
-                 <h3 className="text-3xl sm:text-4xl font-sans font-bold text-white mb-4 tracking-tight">
+                 <h3 className="text-2xl sm:text-3xl font-sans font-bold text-white mb-2 tracking-tight">
                    {selectedProject.title}
                  </h3>
-                 <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
+                 <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-5 max-w-2xl">
                    {selectedProject.description}
                  </p>
                </div>
 
-               <div className="mb-8">
-                 <h4 className="text-[10px] uppercase tracking-widest font-mono text-white/40 mb-3">Destaques deste modelo</h4>
+               <div className="mb-5">
+                 <h4 className="text-[10px] uppercase tracking-widest font-mono text-white/40 mb-2.5">Destaques deste modelo</h4>
                  <div className="flex flex-wrap gap-2">
                     {selectedProject.techList.map((tech) => (
-                      <span key={tech} className="text-xs font-mono text-white/70 bg-white/5 border border-white/10 px-3 py-1.5 rounded-md">
+                      <span key={tech} className="text-[10px] sm:text-xs font-mono text-white/70 bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">
                         {tech}
                       </span>
                     ))}
                  </div>
                </div>
 
-               <div className="mt-auto pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-4 items-center">
+               <div className="mt-auto pt-5 border-t border-white/10 flex flex-col sm:flex-row gap-4 items-center">
                  <button 
                    onClick={() => window.open(`https://wa.me/5554981185625?text=${encodeURIComponent(`Olá! Gostaria de falar com um especialista sobre o modelo de ${selectedProject.title}.`)}`, '_blank')}
-                   className="w-full sm:w-auto flex-1 bg-accent hover:bg-accent-hover text-white font-bold py-4 px-8 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-accent/20 hover:shadow-accent/40 hover:-translate-y-0.5"
+                   className="w-full sm:w-auto flex-1 bg-accent hover:bg-accent-hover text-white font-bold py-3.5 px-6 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-accent/20 hover:shadow-accent/40 hover:-translate-y-0.5"
                  >
                    Falar com especialista sobre este modelo
                  </button>

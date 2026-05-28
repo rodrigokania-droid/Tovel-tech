@@ -25,7 +25,7 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
         <div className="absolute inset-0 z-0 pointer-events-none">
           <BackgroundVideo src="https://stream.mux.com/4IMYGcL01xjs7ek5ANO17JC4VQVUTsojZlnw4fXzwSxc.m3u8" />
           {/* Glass Overlay over the video to ensure text readability */}
-          <div className="absolute inset-0 bg-[#0A0A0A]/60 backdrop-blur-md" />
+          <div className="absolute inset-0 bg-[#0A0A0A]/85 backdrop-blur-md" />
           {/* Gradient fade to blend with the rest of the site */}
           <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0A0A0A] to-transparent" />
         </div>
