@@ -1,7 +1,7 @@
 import React from 'react';
 import { ActivePage } from '../types';
 import { JOB_STEPS } from '../data';
-import { Cpu, Eye, Compass, Workflow, ArrowRight } from 'lucide-react';
+import { Cpu, Eye, Compass, Workflow, ArrowRight, Globe, Instagram, LayoutTemplate, Smartphone, MessageCircle } from 'lucide-react';
 
 interface SobreViewProps {
   setActivePage: (page: ActivePage) => void;
@@ -185,33 +185,85 @@ export default function SobreView({ setActivePage }: SobreViewProps) {
         </div>
       </section>
 
-      {/* BRAND MANUAL / LOGO SECTION */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="space-y-8">
-          <div className="text-center space-y-2">
+      {/* PRESENÇA DIGITAL SECTION */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="space-y-12">
+          <div className="text-center space-y-3">
             <span className="text-[10px] font-mono font-bold tracking-widest text-accent uppercase">
-              NOSSA IDENTIDADE
+              O QUE ENTREGAMOS
             </span>
-            <h2 className="text-2xl sm:text-3xl font-sans font-bold text-white tracking-tight">
-              A Construção da Marca
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-sans font-bold text-white tracking-tight">
+              Presença digital que passa confiança
             </h2>
-            <p className="text-white/60 text-sm max-w-xl mx-auto">
-              Nossa identidade visual reflete a seriedade e o foco que colocamos em cada projeto. Menos complicação, mais profissionalismo e foco no que importa.
+            <p className="text-white/60 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              Criamos a estrutura visual e digital que sua empresa precisa para ser encontrada, entendida e escolhida pelo cliente certo.
             </p>
           </div>
 
-          <div className="glass-card rounded-2xl border border-white/5 p-3 sm:p-4 overflow-hidden relative group hover:border-accent/20 transition-all">
-            <div className="absolute inset-0 bg-gradient-to-tr from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-            <img 
-              src="/brand-manual.png" 
-              alt="Tovel Tecnologia Brand Manual" 
-              className="w-full h-auto object-cover rounded-xl shadow-2xl shadow-[#000]"
-              style={{ filter: 'brightness(0.9) contrast(1.1)' }}
-            />
-            {/* Overlay to give it a slightly dark glass feel to match the site */}
-            <div className="absolute inset-0 bg-[#0A0A0A]/20 pointer-events-none rounded-2xl" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div className="glass-card p-6 sm:p-8 rounded-2xl border border-white/5 hover:border-accent/20 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-accent mb-6 group-hover:bg-accent/10">
+                <Compass size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-3">Identidade visual profissional</h3>
+              <p className="text-white/60 text-sm leading-relaxed">Logo, cores, tipografia e padrão visual para sua empresa parecer séria desde o primeiro contato.</p>
+            </div>
+
+            <div className="glass-card p-6 sm:p-8 rounded-2xl border border-white/5 hover:border-accent/20 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-accent mb-6 group-hover:bg-accent/10">
+                <Globe size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-3">Site institucional</h3>
+              <p className="text-white/60 text-sm leading-relaxed">Uma página clara, rápida e responsiva para apresentar sua empresa, serviços e canais de atendimento.</p>
+            </div>
+
+            <div className="glass-card p-6 sm:p-8 rounded-2xl border border-white/5 hover:border-accent/20 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-accent mb-6 group-hover:bg-accent/10">
+                <Instagram size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-3">Redes sociais organizadas</h3>
+              <p className="text-white/60 text-sm leading-relaxed">Artes, destaques, capa, bio e padrão visual para deixar Instagram e WhatsApp mais profissionais.</p>
+            </div>
+
+            <div className="glass-card p-6 sm:p-8 rounded-2xl border border-white/5 hover:border-accent/20 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-accent mb-6 group-hover:bg-accent/10">
+                <LayoutTemplate size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-3">Página de vendas</h3>
+              <p className="text-white/60 text-sm leading-relaxed">Landing pages focadas em conversão para campanhas, produtos, serviços ou captação de leads.</p>
+            </div>
+
+            <div className="glass-card p-6 sm:p-8 rounded-2xl border border-white/5 hover:border-accent/20 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-accent mb-6 group-hover:bg-accent/10">
+                <Smartphone size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-3">Aplicativos e sistemas</h3>
+              <p className="text-white/60 text-sm leading-relaxed">Soluções sob medida para organizar processos, clientes, pedidos, equipe ou operação interna.</p>
+            </div>
+
+            <div className="glass-card p-6 sm:p-8 rounded-2xl border border-white/5 hover:border-accent/20 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-accent mb-6 group-hover:bg-accent/10">
+                <MessageCircle size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-3">Atendimento direto</h3>
+              <p className="text-white/60 text-sm leading-relaxed">O cliente entende o que você faz e encontra rapidamente como falar com sua empresa.</p>
+            </div>
+            
           </div>
+
+          <div className="flex justify-center pt-6">
+            <button
+              onClick={() => {
+                window.open('https://wa.me/5554981185625', '_blank');
+              }}
+              className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-extrabold text-sm px-8 py-4 rounded-full shadow-lg shadow-accent/15 group cursor-pointer transition-all hover:scale-105 duration-300"
+            >
+              Quero organizar minha presença digital
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
+        </div>
       </section>
 
       {/* CTA SECTION */}

@@ -186,17 +186,17 @@ export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
             className="absolute inset-0" 
             onClick={() => setSelectedProject(null)} 
           />
-          <div className="relative w-full max-w-[1000px] max-h-[85vh] flex flex-col bg-[#0f0f0f] border border-accent/30 rounded-2xl shadow-2xl shadow-accent/10 overflow-hidden transform transition-all animate-slideUp">
+          <div className="relative w-full max-w-3xl max-h-[85vh] flex flex-col bg-[#0f0f0f] border border-accent/30 rounded-2xl shadow-2xl shadow-accent/10 overflow-hidden transform transition-all animate-slideUp">
             <button 
               onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 z-50 p-2 bg-[#1A1A1A] hover:bg-accent hover:text-white text-white/50 rounded-full transition-colors cursor-pointer shadow-lg"
+              className="absolute top-4 right-4 z-50 p-2 bg-black/60 hover:bg-accent hover:text-white text-white/70 rounded-full transition-colors cursor-pointer shadow-lg backdrop-blur-md"
             >
               <X size={20} />
             </button>
             
             <div className="overflow-y-auto custom-scrollbar flex flex-col">
-              <div className="w-full relative shrink-0 bg-[#050505] flex justify-center items-center py-8 sm:py-12 px-4 min-h-[30vh] border-b border-white/5">
-                <img src={selectedProject.imageUrl} alt={selectedProject.title} className="w-full max-w-4xl h-auto object-contain max-h-[50vh] rounded-xl shadow-2xl shadow-accent/5" />
+              <div className="w-full relative shrink-0 border-b border-white/5">
+                <img src={selectedProject.imageUrl} alt={selectedProject.title} className="w-full aspect-[16/10] object-cover" />
               </div>
               
               <div className="p-6 sm:p-10 relative z-10 flex-1 flex flex-col">
