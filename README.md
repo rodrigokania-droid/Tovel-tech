@@ -1,20 +1,50 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Tovel Tecnologia
 
-# Run and deploy your AI Studio app
+Plataforma institucional e portfólio da Tovel Tecnologia. Um site focado em conversão e demonstração de soluções digitais premium, desenvolvido com alta performance.
 
-This contains everything you need to run your app locally.
+## Tecnologias
 
-View your app in AI Studio: https://ai.studio/apps/d4d23fd5-acf2-4e7b-9d12-b093b35c198f
+- **React 19**
+- **Vite 6**
+- **Tailwind CSS 4**
+- **Lucide React** (Ícones)
+- **Framer Motion** (Animações)
+- **TypeScript**
 
-## Run Locally
+## Instalação e Execução Local
 
-**Prerequisites:**  Node.js
+Siga os passos abaixo para rodar o projeto na sua máquina:
 
+1. Clone o repositório:
+```bash
+git clone https://github.com/rodrigokania-droid/Tovel-tech.git
+cd Tovel-tech
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Inicie o servidor de desenvolvimento:
+```bash
+npm run dev
+```
+
+4. Para compilar para produção:
+```bash
+npm run build
+```
+
+## Estrutura do Projeto
+
+- `/src/components`: Componentes visuais do site (Views de navegação, modais, cabeçalho e rodapé).
+- `/src/data.ts`: Base de dados de conteúdo (serviços, planos, portfólio).
+- `/public`: Assets estáticos (imagens, favicons, logos).
+
+## Manutenção
+
+Para garantir que o código está nos padrões, execute:
+```bash
+npm run lint
+```

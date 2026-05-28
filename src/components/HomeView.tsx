@@ -70,6 +70,14 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
                 Falar pelo WhatsApp
                 <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-1.5 transition-transform" />
               </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => setActivePage('servicos')}
+                className="glass-card text-white hover:bg-white/10 font-sans font-semibold text-xs tracking-wider uppercase px-8 py-4 rounded-md border border-white/10 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+              >
+                Ver serviços
+              </motion.button>
             </div>
           </motion.div>
 
@@ -304,15 +312,93 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
           <p className="text-white/60 text-base leading-relaxed max-w-xl mx-auto">
             Acreditamos que todo pixel desenhado e toda linha de código digitada deve ter um único norte: decolar a eficiência, organizar fluxos internos e alavancar o faturamento do seu negócio.
           </p>
-          <div className="pt-4">
+          <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={() => {
                 window.open('https://wa.me/5554981185625', '_blank');
               }}
               className="bg-accent hover:bg-accent-hover text-white font-bold text-sm px-8 py-3.5 rounded-xl transition-all cursor-pointer shadow-lg shadow-accent/15"
             >
-              Iniciar Análise Gratuita
+              Falar pelo WhatsApp
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* PARA QUEM É */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        <div className="text-center space-y-3 mb-10">
+          <span className="text-[10px] font-mono font-bold tracking-widest text-accent uppercase">PERFIL DO CLIENTE</span>
+          <h2 className="text-2xl sm:text-3xl font-display font-medium text-white tracking-tight">Para quem é a Tovel?</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="glass-card p-6 sm:p-8 rounded-2xl border border-white/5 hover:border-white/10 transition-colors">
+            <h3 className="text-lg font-bold text-white mb-2">Comerciantes e Lojistas</h3>
+            <p className="text-sm text-white/60 leading-relaxed">Que precisam organizar o estoque, automatizar pedidos de clientes via WhatsApp e gerenciar finanças sem depender de planilhas de papel.</p>
+          </div>
+          <div className="glass-card p-6 sm:p-8 rounded-2xl border border-white/5 hover:border-white/10 transition-colors">
+            <h3 className="text-lg font-bold text-white mb-2">Prestadores de Serviços</h3>
+            <p className="text-sm text-white/60 leading-relaxed">Médicos, advogados, oficinas e consultores que buscam um site profissional para passar confiança e captar mais clientes online.</p>
+          </div>
+          <div className="glass-card p-6 sm:p-8 rounded-2xl border border-white/5 hover:border-white/10 transition-colors">
+            <h3 className="text-lg font-bold text-white mb-2">Empresas em Crescimento</h3>
+            <p className="text-sm text-white/60 leading-relaxed">Negócios que precisam de um aplicativo próprio ou plataforma SaaS (assinaturas) para vender em escala com tecnologia de ponta.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* DIFERENCIAIS DE CONFIANÇA */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full border-t border-white/5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 text-center">
+          <div className="space-y-2">
+            <div className="w-10 h-10 mx-auto rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold">1</div>
+            <h4 className="text-sm font-bold text-white">Atendimento Direto</h4>
+            <p className="text-xs text-white/50">Você fala com quem resolve.</p>
+          </div>
+          <div className="space-y-2">
+            <div className="w-10 h-10 mx-auto rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold">2</div>
+            <h4 className="text-sm font-bold text-white">Escopo Definido</h4>
+            <p className="text-xs text-white/50">Sem surpresas de preço.</p>
+          </div>
+          <div className="space-y-2">
+            <div className="w-10 h-10 mx-auto rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold">3</div>
+            <h4 className="text-sm font-bold text-white">Prazo Combinado</h4>
+            <p className="text-xs text-white/50">Cronograma transparente.</p>
+          </div>
+          <div className="space-y-2">
+            <div className="w-10 h-10 mx-auto rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold">4</div>
+            <h4 className="text-sm font-bold text-white">Foco no Resultado</h4>
+            <p className="text-xs text-white/50">Soluções para vender mais.</p>
+          </div>
+          <div className="space-y-2">
+            <div className="w-10 h-10 mx-auto rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold">5</div>
+            <h4 className="text-sm font-bold text-white">Suporte Pós-Entrega</h4>
+            <p className="text-xs text-white/50">Não abandonamos você.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        <div className="text-center space-y-3 mb-10">
+          <h2 className="text-2xl sm:text-3xl font-display font-medium text-white tracking-tight">Perguntas Frequentes</h2>
+        </div>
+        <div className="space-y-4 text-left">
+          <div className="glass-card p-6 rounded-xl border border-white/5">
+            <h3 className="text-white font-bold mb-2">Vocês atendem empresas de qual tamanho?</h3>
+            <p className="text-sm text-white/60">Atendemos desde profissionais liberais precisando de uma página de vendas até médias empresas precisando de um sistema web complexo.</p>
+          </div>
+          <div className="glass-card p-6 rounded-xl border border-white/5">
+            <h3 className="text-white font-bold mb-2">Qual é o prazo de entrega?</h3>
+            <p className="text-sm text-white/60">Depende do projeto. Sites institucionais e Landing Pages levam em média de 7 a 15 dias. Sistemas internos e aplicativos podem levar de 30 a 90 dias, sempre combinados em contrato.</p>
+          </div>
+          <div className="glass-card p-6 rounded-xl border border-white/5">
+            <h3 className="text-white font-bold mb-2">Terei suporte depois que o site for pro ar?</h3>
+            <p className="text-sm text-white/60">Sim! Todos os nossos projetos incluem garantia e possuímos planos de manutenção mensais bem acessíveis para cuidar de hospedagem, segurança e correções.</p>
+          </div>
+          <div className="glass-card p-6 rounded-xl border border-white/5">
+            <h3 className="text-white font-bold mb-2">Como funcionam os pagamentos?</h3>
+            <p className="text-sm text-white/60">O pagamento é dividido conforme o tamanho do projeto. Geralmente aceitamos entrada e parcelamento ao longo do desenvolvimento, via Pix ou boleto.</p>
           </div>
         </div>
       </section>

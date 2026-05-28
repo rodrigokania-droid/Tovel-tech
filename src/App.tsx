@@ -157,7 +157,7 @@ export default function App() {
         id="persistent-floating-whatsapp"
       >
         <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 ease-out font-mono text-xs font-semibold whitespace-nowrap pr-0 group-hover:pr-2 leading-none text-white block">
-          Conversar pelo WhatsApp
+          Falar com a Tovel
         </span>
         <MessageSquare size={22} className="fill-white" />
       </a>

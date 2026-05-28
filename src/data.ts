@@ -3,43 +3,51 @@ import { PortfolioItem, ServiceItem, PlanItem, JobStep } from './types';
 export const SERVICES_DATA: ServiceItem[] = [
   {
     id: 'sites',
-    title: 'Sites Profissionais',
+    title: 'Sites Institucionais',
     iconName: 'Laptop',
-    description: 'Sites rápidos, modernos e otimizados para o Google. Sua vitrine digital focada em receber contatos e vender mais.',
+    description: 'A vitrine oficial da sua empresa na internet. Sites modernos que passam confiança e explicam exatamente o que você faz.',
+    badge: 'AUTORIDADE',
+    extendedDescription: 'Ideal para empresas e prestadores de serviço que precisam de um endereço fixo e profissional para serem encontrados no Google.'
+  },
+  {
+    id: 'landing_pages',
+    title: 'Landing Pages',
+    iconName: 'Compass',
+    description: 'Páginas rápidas focadas em um único objetivo: transformar visitantes em leads (contatos) ou clientes.',
     badge: 'VENDAS',
-    extendedDescription: 'Criamos sites que carregam instantaneamente no celular ou computador, garantindo que você não perca nenhum cliente por lentidão ou erros.'
+    extendedDescription: 'Perfeito para campanhas de anúncios e lançamentos. Textos e visual desenhados especificamente para gerar mais cliques no botão de WhatsApp.'
   },
   {
     id: 'sistemas',
-    title: 'Sistemas e Aplicativos',
+    title: 'Sistemas Internos',
+    iconName: 'Database',
+    description: 'Esqueça planilhas confusas. Sistemas web sob medida para organizar clientes, estoque, financeiro ou processos.',
+    badge: 'ORGANIZAÇÃO',
+    extendedDescription: 'Softwares desenhados de acordo com a regra do seu negócio, para que a sua equipe trabalhe mais rápido e sem cometer erros.'
+  },
+  {
+    id: 'aplicativos',
+    title: 'Aplicativos',
     iconName: 'Cpu',
-    description: 'Sistemas sob medida para organizar sua empresa, clientes e pedidos. Ferramentas que trabalham por você, e não o contrário.',
-    badge: 'SOB MEDIDA',
-    extendedDescription: 'Desenvolvemos aplicativos e painéis fáceis de usar, feitos exatamente para resolver os problemas do dia a dia e se adaptar às regras do seu negócio.'
+    description: 'Seu negócio na palma da mão dos seus clientes ou equipe. Aplicativos rápidos e fáceis de usar.',
+    badge: 'INOVAÇÃO',
+    extendedDescription: 'Desenvolvemos apps para catálogos, agendamentos, delivery ou ferramentas para funcionários que trabalham na rua.'
   },
   {
     id: 'saas',
-    title: 'Plataformas Online',
+    title: 'SaaS / Plataformas',
     iconName: 'Database',
-    description: 'Tire sua ideia do papel e crie sua própria plataforma de vendas, portal de alunos ou sistema de assinaturas na internet.',
-    badge: 'INOVAÇÃO',
-    extendedDescription: 'Construa uma plataforma profissional pronta para receber pagamentos, cadastrar milhares de usuários e crescer junto com o seu projeto.'
+    description: 'Transforme sua ideia em um negócio online com pagamentos mensais (assinaturas) ou venda de acessos.',
+    badge: 'ESCALA',
+    extendedDescription: 'Criamos plataformas complexas, áreas de membros e ferramentas online preparadas para receber milhares de acessos.'
   },
   {
     id: 'automacoes',
-    title: 'Automações de Processo',
+    title: 'Automações',
     iconName: 'GitBranch',
-    description: 'Sistemas inteligentes que eliminam o trabalho manual e repetitivo da sua equipe, reduzindo falhas.',
+    description: 'Sistemas inteligentes que fazem o trabalho repetitivo por você, enviando mensagens ou cruzando dados.',
     badge: 'PRODUTIVIDADE',
-    extendedDescription: 'Conectamos planilhas, WhatsApp, e-mails e sistemas para que as informações conversem entre si no automático, poupando horas de trabalho todos os dias.'
-  },
-  {
-    id: 'social_media',
-    title: 'Presença Digital',
-    iconName: 'Compass',
-    description: 'Estratégia visual e gestão focada em atrair clientes reais e fortalecer o nome da sua empresa no mercado.',
-    badge: 'AUTORIDADE',
-    extendedDescription: 'Muito além de curtidas: criamos um visual altamente profissional e usamos a internet para trazer pessoas que realmente querem e podem comprar de você.'
+    extendedDescription: 'Integramos WhatsApp, e-mails, bancos e sistemas para que a informação flua automaticamente na sua empresa 24h por dia.'
   }
 ];
 
