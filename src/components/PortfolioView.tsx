@@ -20,6 +20,20 @@ export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
     return () => { document.body.style.overflow = 'unset'; };
   }, [selectedProject]);
 
+  React.useEffect(() => {
+    const handleOpenPortfolio = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      const proj = PORTFOLIO_DATA.find(p => p.id === customEvent.detail);
+      if (proj) {
+        setSelectedProject(proj);
+      }
+    };
+    window.addEventListener('open-portfolio', handleOpenPortfolio);
+    return () => {
+      window.removeEventListener('open-portfolio', handleOpenPortfolio);
+    };
+  }, []);
+
   const filterOptions = [
     { value: 'todos', label: 'TODOS' },
     { value: 'sites', label: 'SITES' },

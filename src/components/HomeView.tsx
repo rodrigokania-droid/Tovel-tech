@@ -9,7 +9,6 @@ interface HomeViewProps {
 }
 
 export default function HomeView({ setActivePage }: HomeViewProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   const openPortfolio = (projectId: string) => {
     window.dispatchEvent(new CustomEvent('open-portfolio', { detail: projectId }));
