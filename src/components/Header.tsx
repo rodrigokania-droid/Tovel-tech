@@ -36,9 +36,10 @@ export default function Header({ activePage, setActivePage }: HeaderProps) {
             onClick={() => handleNavClick('home')}
             id="header-logo-container"
           >
-            <TransparentLogo 
-              src="/logo-menu.webp" 
-              className="h-[62px] w-auto object-contain mix-blend-screen group-hover:scale-[1.02] transition-transform duration-300"
+            <img 
+              src="/logo-transparent.png" 
+              alt="Tovel Tecnologia"
+              className="h-[62px] w-auto object-contain group-hover:scale-[1.02] transition-transform duration-300"
             />
           </div>
 
