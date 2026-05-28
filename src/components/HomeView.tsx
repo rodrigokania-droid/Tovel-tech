@@ -108,7 +108,7 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
                   className="bg-[#0A0A0A] border border-accent/30 p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
                 >
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-white group-hover:border-white/30 transition-all duration-300">
+                  <div className="w-10 h-10 border border-accent/30 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-accent group-hover:border-accent transition-all duration-300">
                     <Cpu size={18} strokeWidth={1.5} />
                   </div>
                   <h3 className="font-medium text-sm text-zinc-200 mb-2">Sistemas Online</h3>
@@ -122,7 +122,7 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
                   className="bg-[#0A0A0A] border border-accent/30 p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
                 >
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-white group-hover:border-white/30 transition-all duration-300">
+                  <div className="w-10 h-10 border border-accent/30 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-accent group-hover:border-accent transition-all duration-300">
                     <Activity size={18} strokeWidth={1.5} />
                   </div>
                   <h3 className="font-medium text-sm text-zinc-200 mb-2">Aplicativos</h3>
@@ -136,7 +136,7 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
                   className="bg-[#0A0A0A] border border-accent/30 p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
                 >
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-white group-hover:border-white/30 transition-all duration-300">
+                  <div className="w-10 h-10 border border-accent/30 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-accent group-hover:border-accent transition-all duration-300">
                     <Zap size={18} strokeWidth={1.5} />
                   </div>
                   <h3 className="font-medium text-sm text-zinc-200 mb-2">Automações</h3>
@@ -150,7 +150,7 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
                   className="bg-[#0A0A0A] border border-accent/30 p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
                 >
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-white group-hover:border-white/30 transition-all duration-300">
+                  <div className="w-10 h-10 border border-accent/30 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-accent group-hover:border-accent transition-all duration-300">
                     <Briefcase size={18} strokeWidth={1.5} />
                   </div>
                   <h3 className="font-medium text-sm text-zinc-200 mb-2">Sites Profissionais</h3>

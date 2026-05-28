@@ -39,7 +39,7 @@ export default function Header({ activePage, setActivePage }: HeaderProps) {
             <img 
               src="/logo-menu.webp" 
               alt="Tovel Tecnologia"
-              className="h-[62px] w-auto object-contain mix-blend-screen group-hover:scale-[1.02] transition-transform duration-300"
+              className="h-[62px] w-auto object-contain mix-blend-lighten group-hover:scale-[1.02] transition-transform duration-300"
             />
           </div>
 

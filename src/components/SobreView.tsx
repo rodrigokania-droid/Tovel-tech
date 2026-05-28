@@ -164,9 +164,9 @@ export default function SobreView({ setActivePage }: SobreViewProps) {
                 return (
                   <div 
                     key={step.number}
-                    className="bg-[#0c0c0c]/60 border border-white/5 rounded-xl p-6 space-y-4 text-left relative overflow-hidden hover:border-accent/20 transition-all duration-300"
+                    className="bg-[#0c0c0c]/60 border border-white/5 rounded-xl p-6 space-y-4 text-left relative overflow-hidden hover:border-accent/20 transition-all duration-300 group"
                   >
-                    <div className="text-3xl font-bold font-sans text-accent/20 mb-2">
+                    <div className="text-3xl font-bold font-sans text-accent/20 mb-2 group-hover:text-accent transition-colors duration-300">
                       {step.number}
                     </div>
                     <div className="space-y-1.5">

@@ -62,14 +62,14 @@ export default function ContatoView({ selectedProjectType, setSelectedProjectTyp
           {/* Email Corp */}
           <a
             href="mailto:contato@tovel.com.br"
-            className="group flex flex-col justify-between p-8 rounded-2xl glass-card border border-white/5 hover:border-accent/20 text-center transition-all duration-300 hover:scale-[1.03]"
+            className="group flex flex-col justify-between p-8 rounded-2xl glass-card border border-white/5 hover:border-accent/40 hover:bg-accent/[0.02] text-center transition-all duration-300 hover:scale-[1.03]"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 text-white/70 flex items-center justify-center mx-auto transition-transform group-hover:scale-110">
+              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 text-white/70 flex items-center justify-center mx-auto transition-all duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:border-accent group-hover:text-white">
                 <Mail size={22} />
               </div>
               <div className="space-y-1">
-                <span className="text-[10px] text-white/40 font-mono font-bold tracking-widest uppercase">PROPOSTAS FORMAIS</span>
+                <span className="text-[10px] text-white/40 group-hover:text-accent transition-colors font-mono font-bold tracking-widest uppercase">PROPOSTAS FORMAIS</span>
                 <h3 className="text-lg font-bold text-white font-sans">E-mail</h3>
               </div>
               <p className="text-white/50 text-xs">
@@ -82,20 +82,20 @@ export default function ContatoView({ selectedProjectType, setSelectedProjectTyp
           </a>
 
           {/* Sede Operacional */}
-          <div className="group flex flex-col justify-between p-8 rounded-2xl glass-card border border-white/5 hover:border-accent/20 text-center transition-all duration-300">
+          <div className="group flex flex-col justify-between p-8 rounded-2xl glass-card border border-white/5 hover:border-accent/40 hover:bg-accent/[0.02] text-center transition-all duration-300 hover:scale-[1.03]">
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 text-white/70 flex items-center justify-center mx-auto">
+              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 text-white/70 flex items-center justify-center mx-auto transition-all duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:border-accent group-hover:text-white">
                 <MapPin size={22} />
               </div>
               <div className="space-y-1">
-                <span className="text-[10px] text-white/40 font-mono font-bold tracking-widest uppercase">ATENDIMENTO NACIONAL</span>
+                <span className="text-[10px] text-white/40 group-hover:text-accent transition-colors font-mono font-bold tracking-widest uppercase">ATENDIMENTO NACIONAL</span>
                 <h3 className="text-lg font-bold text-white font-sans">Atendimento</h3>
               </div>
               <p className="text-white/50 text-xs">
                 Atendemos empresas de todo o Brasil de forma online.
               </p>
             </div>
-            <div className="mt-8 pt-4 border-t border-white/5 text-sm font-semibold text-white">
+            <div className="mt-8 pt-4 border-t border-white/5 text-sm font-semibold text-white group-hover:text-accent transition-colors">
               Rio Grande do Sul, Brasil
             </div>
           </div>
