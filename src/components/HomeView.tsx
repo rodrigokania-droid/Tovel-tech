@@ -98,7 +98,7 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
                 <motion.div 
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                   whileHover={{ scale: 1.02, translateY: -5 }}
-                  className="glass-card p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
+                  className="bg-[#0A0A0A] border border-white/5 p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
                 >
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-white group-hover:border-white/30 transition-all duration-300">
@@ -111,7 +111,7 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
                 <motion.div 
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                   whileHover={{ scale: 1.02, translateY: -5 }}
-                  className="glass-card p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
+                  className="bg-[#0A0A0A] border border-white/5 p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 blur-2xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="w-10 h-10 bg-accent/10 border border-accent/20 rounded-full flex items-center justify-center mb-6 text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
@@ -124,7 +124,7 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
                 <motion.div 
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                   whileHover={{ scale: 1.02, translateY: -5 }}
-                  className="glass-card p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
+                  className="bg-[#0A0A0A] border border-white/5 p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
                 >
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-white group-hover:border-white/30 transition-all duration-300">
@@ -137,7 +137,7 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
                 <motion.div 
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                   whileHover={{ scale: 1.02, translateY: -5 }}
-                  className="glass-card p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
+                  className="bg-[#0A0A0A] border border-white/5 p-6 rounded-3xl transition-all duration-500 cursor-pointer group relative overflow-hidden"
                 >
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center mb-6 text-zinc-400 group-hover:text-white group-hover:border-white/30 transition-all duration-300">
