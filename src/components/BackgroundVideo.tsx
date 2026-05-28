@@ -47,8 +47,8 @@ export default function BackgroundVideo({ src }: BackgroundVideoProps) {
       muted
       playsInline
       poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-      className="w-full h-full object-cover opacity-50 mix-blend-screen bg-[#0A0A0A] transition-opacity duration-1000"
-      style={{ filter: 'contrast(1.1) brightness(0.9)' }}
+      className="w-full h-full object-cover opacity-25 mix-blend-screen bg-[#0A0A0A] transition-opacity duration-1000"
+      style={{ filter: 'grayscale(100%) sepia(100%) hue-rotate(345deg) saturate(400%) contrast(1.2) brightness(0.6)' }}
     />
   );
 }

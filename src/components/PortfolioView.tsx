@@ -178,56 +178,60 @@ export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
 
       {/* PROJECT MODAL */}
       {selectedProject && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center px-4" id="portfolio-modal">
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-[#000000]/80 backdrop-blur-sm animate-fadeIn"
+          id="portfolio-modal"
+        >
           <div 
-            className="absolute inset-0 bg-[#0A0A0A]/90 backdrop-blur-md transition-opacity" 
+            className="absolute inset-0" 
             onClick={() => setSelectedProject(null)} 
           />
-          <div className="relative glass-card border border-white/10 rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto overflow-x-hidden animate-slideUp shadow-2xl flex flex-col">
+          <div className="relative w-full max-w-[1000px] max-h-[85vh] flex flex-col bg-[#0f0f0f] border border-accent/30 rounded-2xl shadow-2xl shadow-accent/10 overflow-hidden transform transition-all animate-slideUp">
             <button 
               onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/80 transition-colors border border-white/10"
+              className="absolute top-4 right-4 z-50 p-2 bg-[#1A1A1A] hover:bg-accent hover:text-white text-white/50 rounded-full transition-colors cursor-pointer shadow-lg"
             >
-              <X size={18} />
+              <X size={20} />
             </button>
             
-            <div className="h-44 sm:h-52 md:h-64 w-full relative shrink-0">
-              <img src={selectedProject.imageUrl} alt={selectedProject.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/20 to-transparent" />
-            </div>
-            
-            <div className="p-5 sm:p-6 -mt-12 sm:-mt-16 relative z-10 flex-1 flex flex-col">
-               <div>
-                 <span className="text-[10px] font-mono font-bold text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded-full mb-3 inline-block backdrop-blur-md">
-                    {selectedProject.categoryLabel}
-                 </span>
-                 <h3 className="text-2xl sm:text-3xl font-sans font-bold text-white mb-2 tracking-tight">
-                   {selectedProject.title}
-                 </h3>
-                 <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-5 max-w-2xl">
-                   {selectedProject.description}
-                 </p>
-               </div>
-
-               <div className="mb-5">
-                 <h4 className="text-[10px] uppercase tracking-widest font-mono text-white/40 mb-2.5">Destaques deste modelo</h4>
-                 <div className="flex flex-wrap gap-2">
-                    {selectedProject.techList.map((tech) => (
-                      <span key={tech} className="text-[10px] sm:text-xs font-mono text-white/70 bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">
-                        {tech}
-                      </span>
-                    ))}
+            <div className="overflow-y-auto custom-scrollbar flex flex-col">
+              <div className="w-full relative shrink-0 bg-[#050505] flex justify-center items-center py-8 sm:py-12 px-4 min-h-[30vh] border-b border-white/5">
+                <img src={selectedProject.imageUrl} alt={selectedProject.title} className="w-full max-w-4xl h-auto object-contain max-h-[50vh] rounded-xl shadow-2xl shadow-accent/5" />
+              </div>
+              
+              <div className="p-6 sm:p-10 relative z-10 flex-1 flex flex-col">
+                 <div>
+                   <span className="text-xs font-mono font-bold text-accent bg-accent/10 border border-accent/20 px-3 py-1 rounded-full mb-4 inline-block">
+                      {selectedProject.categoryLabel}
+                   </span>
+                   <h3 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-white mb-4 tracking-tight">
+                     {selectedProject.title}
+                   </h3>
+                   <p className="text-white/70 text-base sm:text-lg md:text-xl leading-relaxed mb-8 max-w-3xl">
+                     {selectedProject.description}
+                   </p>
                  </div>
-               </div>
 
-               <div className="mt-auto pt-5 border-t border-white/10 flex flex-col sm:flex-row gap-4 items-center">
-                 <button 
-                   onClick={() => window.open(`https://wa.me/5554981185625?text=${encodeURIComponent(`Olá! Gostaria de falar com um especialista sobre o modelo de ${selectedProject.title}.`)}`, '_blank')}
-                   className="w-full sm:w-auto flex-1 bg-accent hover:bg-accent-hover text-white font-bold py-3.5 px-6 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-accent/20 hover:shadow-accent/40 hover:-translate-y-0.5"
-                 >
-                   Falar com especialista sobre este modelo
-                 </button>
-               </div>
+                 <div className="mb-10">
+                   <h4 className="text-xs uppercase tracking-widest font-mono text-white/40 mb-4">Destaques deste modelo</h4>
+                   <div className="flex flex-wrap gap-2 sm:gap-3">
+                      {selectedProject.techList.map((tech) => (
+                        <span key={tech} className="text-xs sm:text-sm font-mono text-white/70 bg-white/5 border border-white/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md">
+                          {tech}
+                        </span>
+                      ))}
+                   </div>
+                 </div>
+
+                 <div className="mt-auto pt-8 border-t border-white/10 flex flex-col sm:flex-row gap-4 items-center pb-2">
+                   <button 
+                     onClick={() => window.open(`https://wa.me/5554981185625?text=${encodeURIComponent(`Olá! Gostaria de falar com um especialista sobre o modelo de ${selectedProject.title}.`)}`, '_blank')}
+                     className="w-full sm:w-auto bg-accent hover:bg-accent-hover text-white font-bold py-4 px-8 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-accent/20 hover:shadow-accent/40 hover:-translate-y-0.5 text-lg"
+                   >
+                     Falar com especialista sobre este modelo
+                   </button>
+                 </div>
+              </div>
             </div>
           </div>
         </div>
