@@ -46,8 +46,8 @@ export default function BackgroundVideo({ src }: BackgroundVideoProps) {
       loop
       muted
       playsInline
-      poster="/logo-transparent.png"
-      className="w-full h-full object-cover opacity-50 mix-blend-screen bg-[#0A0A0A]"
+      poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      className="w-full h-full object-cover opacity-50 mix-blend-screen bg-[#0A0A0A] transition-opacity duration-1000"
       style={{ filter: 'contrast(1.1) brightness(0.9)' }}
     />
   );
