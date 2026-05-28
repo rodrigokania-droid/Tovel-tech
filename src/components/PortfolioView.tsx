@@ -90,7 +90,10 @@ export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
               >
                 <div>
                   {/* Real Image Mockup */}
-                  <div className="aspect-video bg-[#0c0c0c]/80 rounded-xl border border-white/5 mb-6 relative overflow-hidden group-hover:border-accent/20 transition-all duration-500">
+                  <div 
+                    onClick={() => setSelectedProject(project)}
+                    className="aspect-video bg-[#0c0c0c]/80 rounded-xl border border-white/5 mb-6 relative overflow-hidden group-hover:border-accent/20 transition-all duration-500 cursor-pointer group/img"
+                  >
                     <img 
                       src={project.imageUrl} 
                       alt={`Demonstração de ${project.title}`}
@@ -98,6 +101,12 @@ export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-transparent to-transparent opacity-80" />
+                    
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-[2px]">
+                      <span className="bg-accent text-white text-xs font-bold px-4 py-2 rounded-full transform translate-y-4 group-hover/img:translate-y-0 transition-transform duration-300 shadow-lg shadow-accent/20">
+                        Ver detalhes
+                      </span>
+                    </div>
                   </div>
 
                   {/* Badges */}
@@ -121,19 +130,21 @@ export default function PortfolioView({ setActivePage }: PortfolioViewProps) {
                 <div className="space-y-4 pt-4 border-t border-white/5">
                   <div className="flex flex-wrap gap-1.5 animate-fadeIn">
                     {project.techList.map((tech) => (
-                      <span key={tech} className="text-[8px] font-mono text-white/50 bg-white/5 border border-white/5 px-2 py-0.5 rounded">
+                      <span key={tech} className="text-[10px] sm:text-xs font-mono text-white/60 bg-white/5 border border-white/10 px-2 py-1 rounded">
                         {tech}
                       </span>
                     ))}
                   </div>
                   
-                  <button
-                    onClick={() => setSelectedProject(project)}
-                    className="inline-flex items-center gap-2 text-xs font-mono font-bold text-white/65 hover:text-accent transition-colors pt-2 group-hover:translate-x-1 cursor-pointer bg-transparent border-none p-0 text-left"
+                  <a
+                    href={`https://wa.me/5554981185625?text=${encodeURIComponent(`Olá! Gostaria de falar com um especialista sobre o modelo de ${project.title}.`)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-mono font-bold text-white/65 hover:text-accent transition-colors pt-2 group-hover:translate-x-1"
                   >
                     Falar com especialista sobre este modelo
                     <ChevronRight size={14} className="text-accent" />
-                  </button>
+                  </a>
                 </div>
               </div>
             );
