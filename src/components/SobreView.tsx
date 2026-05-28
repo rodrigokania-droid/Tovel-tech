@@ -235,7 +235,7 @@ export default function SobreView({ setActivePage }: SobreViewProps) {
             className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-extrabold text-sm px-8 py-4 rounded-full shadow-lg shadow-accent/15 group cursor-pointer shrink-0 transition-all hover:scale-105 duration-300"
             id="sobre-bottom-cta"
           >
-            Falar com especialista
+            Falar pelo WhatsApp
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

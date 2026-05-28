@@ -61,7 +61,7 @@ export default function ServicosView({ setActivePage, setSelectedProjectType }: 
               rel="noreferrer"
               className="glass-card text-white hover:bg-white/5 font-extrabold text-sm px-8 py-3.5 rounded-full border border-white/10 cursor-pointer flex items-center gap-2 transition-all hover:scale-105"
             >
-              Chamar no WhatsApp
+              Falar pelo WhatsApp
             </a>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function ServicosView({ setActivePage, setSelectedProjectType }: 
                     onClick={() => handleRequestService(service.title)}
                     className="w-full bg-white/5 hover:bg-accent/10 text-white hover:text-accent text-xs font-semibold py-2.5 px-4 rounded-xl border border-white/5 hover:border-accent/20 transition-all cursor-pointer text-center flex items-center justify-center gap-2"
                   >
-                    Falar sobre o projeto
+                    Falar pelo WhatsApp
                     <Icons.ChevronRight size={14} />
                   </button>
                 </div>
@@ -177,7 +177,7 @@ export default function ServicosView({ setActivePage, setSelectedProjectType }: 
               }}
               className="bg-accent hover:bg-accent-hover text-white font-extrabold text-sm px-8 py-3.5 rounded-full transition-all cursor-pointer shadow-lg shadow-accent/15 hover:scale-105"
             >
-              Chamar no WhatsApp
+              Falar pelo WhatsApp
             </button>
           </div>
         </div>

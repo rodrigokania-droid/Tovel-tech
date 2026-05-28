@@ -121,7 +121,7 @@ export const PLANS_DATA: PlanItem[] = [
     isPopular: true,
     tag: "MAIS ESCOLHIDO",
     whatsappMessage: "Olá! Quero estruturar um Aplicativo ou Sistema sob medida para minha empresa.",
-    buttonLabel: "Quero criar meu sistema"
+    buttonLabel: "Quero um sistema para minha empresa"
   },
   {
     name: "Presença Digital",
@@ -134,7 +134,7 @@ export const PLANS_DATA: PlanItem[] = [
       "Estratégia para atrair mais clientes"
     ],
     whatsappMessage: "Olá! Preciso de ajuda para melhorar a Presença Digital da minha empresa.",
-    buttonLabel: "Quero melhorar minha presença digital"
+    buttonLabel: "Falar pelo WhatsApp"
   }
 ];
 

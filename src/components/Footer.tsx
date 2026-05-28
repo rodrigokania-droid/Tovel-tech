@@ -35,7 +35,7 @@ export default function Footer({ setActivePage }: FooterProps) {
               />
             </div>
             <p className="text-white/60 text-sm max-w-sm leading-relaxed mb-6">
-              Desenvolvemos ecossistemas tecnológicos premium: de sites ultra-rápidos e automações de fluxo a sistemas complexos e aplicativos resilientes para empresas de alta performance.
+              Criamos sites ultra-rápidos, sistemas sob medida, aplicativos e automações focados em aumentar as suas vendas e organizar a sua empresa.
             </p>
             <div className="flex gap-4">
               <a 

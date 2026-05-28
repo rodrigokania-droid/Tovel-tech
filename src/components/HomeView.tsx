@@ -47,13 +47,14 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-medium leading-[1.1] tracking-tight text-white uppercase">
-              A solução digital <br className="hidden md:block" />
-              certa para o <br className="hidden md:block" />
-              <span className="text-accent">seu negócio</span>
+              Sites, aplicativos <br className="hidden md:block" />
+              e sistemas para <br className="hidden md:block" />
+              empresas que querem <br className="hidden lg:block" />
+              <span className="text-accent">vender mais e trabalhar melhor</span>
             </h1>
 
             <p className="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-xl font-sans font-light">
-              Você tem uma ideia, um negócio ou um processo bagunçado. Nós transformamos isso em sites, aplicativos, sistemas, automações e presença digital.
+              Criamos soluções digitais sob medida para empresas que precisam aparecer melhor, organizar processos, vender online ou transformar uma ideia em aplicativo.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -66,7 +67,7 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
                 }}
                 className="bg-accent hover:bg-accent-hover text-white font-sans font-semibold text-xs tracking-wider uppercase px-8 py-4 rounded-md shadow-lg shadow-accent/20 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group"
               >
-                Falar com Especialista
+                Falar pelo WhatsApp
                 <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-1.5 transition-transform" />
               </motion.button>
             </div>
@@ -227,7 +228,7 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
             <div className="space-y-3">
               <h3 className="text-2xl font-display font-medium text-white tracking-tight">
                 Tudo o que há de <br />
-                mais moderno
+                mais seguro e rápido
               </h3>
               <p className="text-white/60 text-sm leading-relaxed max-w-xs">
                 Usamos as melhores ferramentas do mercado para garantir que seu site ou sistema seja extremamente rápido e não trave.
@@ -236,12 +237,12 @@ export default function HomeView({ setActivePage }: HomeViewProps) {
             
             <div className="pt-4 border-t border-white/5 mt-4 grid grid-cols-2 gap-4">
               <div>
-                <div className="text-xs text-white/30 font-mono">FRAMEWORKS</div>
-                <div className="text-sm font-semibold text-white">React / Next</div>
+                <div className="text-xs text-white/30 font-mono">TECNOLOGIA</div>
+                <div className="text-sm font-semibold text-white">Última Geração</div>
               </div>
               <div>
-                <div className="text-xs text-white/30 font-mono">ESTILIZAÇÃO</div>
-                <div className="text-sm font-semibold text-white">Tailwind 4</div>
+                <div className="text-xs text-white/30 font-mono">VELOCIDADE</div>
+                <div className="text-sm font-semibold text-white">Carregamento Rápido</div>
               </div>
             </div>
           </div>
